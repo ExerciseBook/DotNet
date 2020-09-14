@@ -7,16 +7,16 @@ namespace Shapes
 
         public Triangle(Point p1, Point p2, Point p3)
         {
-            this.points.Add(new Point(p1));
-            this.points.Add(new Point(p2));
-            this.points.Add(new Point(p3));
+            this.Points.Add(new Point(p1));
+            this.Points.Add(new Point(p2));
+            this.Points.Add(new Point(p3));
         }
 
         public override double Aera()
         {
-            Point p1 = this.points[0];
-            Point p2 = this.points[1];
-            Point p3 = this.points[2];
+            Point p1 = this.Points[0];
+            Point p2 = this.Points[1];
+            Point p3 = this.Points[2];
 
             double l1 = p1.Distance(p2);
             double l2 = p2.Distance(p3);
