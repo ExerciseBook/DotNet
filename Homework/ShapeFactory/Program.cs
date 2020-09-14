@@ -6,46 +6,15 @@ namespace ShapeFactory
     {
         static void Main(string[] args)
         {
-            Console.WriteLine((new Triangle(
-                    new Point{x = 0, y = 0}, 
-                    new Point{x = 0, y = 3}, 
-                    new Point{x = 4, y = 0} 
-                )).Aera());
+            double tot = 0;
+            Random random = new Random();
 
-            Console.WriteLine((new Rectangle(
-                new Point { x = 0, y = 0 },
-                new Point { x = 5, y = 5 }
-            )).Aera());
-
-            Console.WriteLine((new Square(
-                new Point { x = 0, y = 0 },
-                new Point { x = 5, y = 5 }
-            )).Aera());
-
-            try
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine((new Rectangle(
-                    new Point { x = 0, y = 0 },
-                    new Point { x = 0, y = 5 }
-                )).Aera());
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
+                tot += Factory.GenerateShape((Factory.ShapeID) random.Next(3)).Aera();
             }
 
-            try
-            {
-                Console.WriteLine((new Square(
-                    new Point { x = 0, y = 0 },
-                    new Point { x = 4, y = 5 }
-                )).Aera());
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
+            Console.WriteLine(tot);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ShapeFactory
+namespace Shapes
 {
     public abstract class Shape
     {
