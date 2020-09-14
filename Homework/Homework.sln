@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeFactory", "ShapeFactor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{4C5FD0C7-EA52-4B04-8E09-22094D5EFFD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAlarm", "EventAlarm\EventAlarm.csproj", "{37ED7922-67BB-4504-ABEA-7609B3E21277}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,18 @@ Global
 		{4C5FD0C7-EA52-4B04-8E09-22094D5EFFD4}.Release|x64.Build.0 = Release|Any CPU
 		{4C5FD0C7-EA52-4B04-8E09-22094D5EFFD4}.Release|x86.ActiveCfg = Release|Any CPU
 		{4C5FD0C7-EA52-4B04-8E09-22094D5EFFD4}.Release|x86.Build.0 = Release|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Debug|x64.Build.0 = Debug|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Debug|x86.Build.0 = Debug|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|x64.ActiveCfg = Release|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|x64.Build.0 = Release|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|x86.ActiveCfg = Release|Any CPU
+		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
