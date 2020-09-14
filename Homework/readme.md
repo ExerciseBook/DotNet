@@ -11,4 +11,6 @@
 # Week 2
 |题目|文件夹|
 |:----|:----|
+|形状|Shape|
 |形状工厂|ShapeFactory|
+|为本讲示例中的泛型链表类添加ForEach(Action<T> action)方法|MyLinkedList|
