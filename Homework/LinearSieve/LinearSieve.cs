@@ -1,4 +1,4 @@
-﻿namespace LinearSieve
+namespace LinearSieve
 {
     public class LinearSieve
     {
