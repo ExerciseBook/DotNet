@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator-Console", "Calcu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator-WPF", "Calculator-WPF\Calculator-WPF.csproj", "{4B5F8F4C-B3D1-4CD6-98FD-DC56F1FB062C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factor", "Factor\Factor.csproj", "{5328B95A-00F1-475A-B6BD-EEA363541391}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factor", "Factor\Factor.csproj", "{5328B95A-00F1-475A-B6BD-EEA363541391}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statistic", "Statistic\Statistic.csproj", "{A86DB4A7-69ED-4BF4-B5E8-0B9C26EB5FC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Statistic", "Statistic\Statistic.csproj", "{A86DB4A7-69ED-4BF4-B5E8-0B9C26EB5FC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSieve", "LinearSieve\LinearSieve.csproj", "{C05FF37B-D682-4C11-80A5-D01626750898}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearSieve", "LinearSieve\LinearSieve.csproj", "{C05FF37B-D682-4C11-80A5-D01626750898}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toeplitz", "Toeplitz\Toeplitz.csproj", "{4125EBD2-E7E9-44EE-9175-04B58B69A2AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toeplitz", "Toeplitz\Toeplitz.csproj", "{4125EBD2-E7E9-44EE-9175-04B58B69A2AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeFactory", "ShapeFactory\ShapeFactory.csproj", "{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,18 @@ Global
 		{4125EBD2-E7E9-44EE-9175-04B58B69A2AA}.Release|x64.Build.0 = Release|Any CPU
 		{4125EBD2-E7E9-44EE-9175-04B58B69A2AA}.Release|x86.ActiveCfg = Release|Any CPU
 		{4125EBD2-E7E9-44EE-9175-04B58B69A2AA}.Release|x86.Build.0 = Release|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Debug|x64.Build.0 = Debug|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Debug|x86.Build.0 = Debug|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Release|x64.ActiveCfg = Release|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Release|x64.Build.0 = Release|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Release|x86.ActiveCfg = Release|Any CPU
+		{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
