@@ -4,12 +4,11 @@ namespace EventAlarm
 {
     public class Clock
     {
+        public delegate void Alarm(long time);
 
         public delegate void Tick(long time);
 
         public event Tick TickList;
-
-        public delegate void Alarm(long time);
 
         public event Alarm ALarmList;
 
@@ -20,20 +19,13 @@ namespace EventAlarm
             {
                 t++;
 
-                if (t % 1 == 0)
-                {
-                    TickList?.Invoke(t);
-                }
+                if (t % 1 == 0) TickList?.Invoke(t);
 
-                if (t % 10 == 0)
-                {
-                    ALarmList?.Invoke(t);
-                }
+                if (t % 10 == 0) ALarmList?.Invoke(t);
 
 
                 Thread.Sleep(1000);
             }
-
         }
     }
 }

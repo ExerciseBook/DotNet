@@ -2,16 +2,14 @@
 
 namespace EventAlarm
 {
-    class Program
+    internal class Program
     {
-
-
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Clock clock = new Clock();
+            var clock = new Clock();
 
-            clock.TickList += (s) => Console.WriteLine("T " + s);
-            clock.ALarmList += (s) => Console.WriteLine("A " + s);
+            clock.TickList += s => Console.WriteLine("T " + s);
+            clock.ALarmList += s => Console.WriteLine("A " + s);
 
             clock.Worker();
         }

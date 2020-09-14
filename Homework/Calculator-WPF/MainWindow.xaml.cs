@@ -1,22 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator_WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -27,7 +15,7 @@ namespace Calculator_WPF
 
         private void InputOper_OnDataContextChanged(object sender, EventArgs e)
         {
-            char data = InputOper.Text.Length > 0 ? InputOper.Text[0] : '+';
+            var data = InputOper.Text.Length > 0 ? InputOper.Text[0] : '+';
 
             switch (data)
             {
@@ -59,40 +47,39 @@ namespace Calculator_WPF
         {
             try
             {
-                double a = Double.Parse(InputA.Text);
-                double b = Double.Parse(InputB.Text);
-                char oper = InputOper.Text[0];
+                var a = double.Parse(InputA.Text);
+                var b = double.Parse(InputB.Text);
+                var oper = InputOper.Text[0];
                 double result = 0;
 
                 switch (oper)
                 {
                     case '+':
-                        {
-                            result = a + b;
-                            break;
-                        }
+                    {
+                        result = a + b;
+                        break;
+                    }
                     case '-':
-                        {
-                            result = a - b;
-                            break;
-                        }
+                    {
+                        result = a - b;
+                        break;
+                    }
                     case '*':
-                        {
-                            result = a * b;
-                            break;
-                        }
+                    {
+                        result = a * b;
+                        break;
+                    }
                     case '/':
-                        {
-                            result = a / b;
-                            break;
-                        }
+                    {
+                        result = a / b;
+                        break;
+                    }
                 }
 
                 InputResult.Text = "" + result;
             }
             catch (Exception exception)
             {
-                
             }
         }
     }

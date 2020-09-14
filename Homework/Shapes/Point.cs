@@ -8,13 +8,12 @@ namespace Shapes
 
         public Point()
         {
-
         }
 
         public Point(Point t)
         {
-            this.x = t.x;
-            this.y = t.y;
+            x = t.x;
+            y = t.y;
         }
 
         public double Distance(Point t)

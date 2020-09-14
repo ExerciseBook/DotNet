@@ -2,18 +2,19 @@ using System;
 
 namespace Calculator_Console
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             double a, b, result = 0;
-            Double.TryParse(Console.ReadLine(), out a);
-            Double.TryParse(Console.ReadLine(), out b);
+            double.TryParse(Console.ReadLine(), out a);
+            double.TryParse(Console.ReadLine(), out b);
 
             char? oper;
             oper = Console.ReadLine()?.Trim()?[0];
-            
-            switch (oper) {
+
+            switch (oper)
+            {
                 case '+':
                 {
                     result = a + b;

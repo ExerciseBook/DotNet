@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 
 namespace MyLinkedList
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            GenericList<int> list = new GenericList<int>();
+            var list = new GenericList<int>();
 
             list.Add(1);
             list.Add(1);
@@ -16,9 +15,9 @@ namespace MyLinkedList
             list.Add(1);
             list.Add(4);
 
-            int max = Int32.MinValue;
-            int min = Int32.MaxValue;
-            int sum = 0;
+            var max = int.MinValue;
+            var min = int.MaxValue;
+            var sum = 0;
 
             list.ForEach(s =>
                 {
@@ -31,7 +30,6 @@ namespace MyLinkedList
             Console.WriteLine(max);
             Console.WriteLine(min);
             Console.WriteLine(sum);
-            
         }
     }
 }

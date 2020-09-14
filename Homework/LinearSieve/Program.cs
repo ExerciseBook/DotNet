@@ -2,20 +2,19 @@ using System;
 
 namespace LinearSieve
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            LinearSieve p = new LinearSieve(100);
+            var p = new LinearSieve(100);
 
             p.CreatePrime();
 
-            foreach (int t in p.p)
+            foreach (var t in p.p)
             {
                 if (t == 0) break;
                 Console.WriteLine(t);
             }
-
         }
     }
 }
