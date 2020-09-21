@@ -55,8 +55,6 @@ namespace OrderLibrary
 
         /// <summary>
         /// 查询订单
-        ///
-        /// TODO 讲道理这里应该要写成多关键词多排序的，真的不想写的
         /// </summary>
         /// <returns></returns>
         public OrderQueryBuilder Retrieve()
