@@ -17,16 +17,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toeplitz", "Toeplitz\Toepli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "Shapes\Shapes.csproj", "{C657B5BE-3A4B-40EA-A3EA-11B0F5303160}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeFactory", "ShapeFactory\ShapeFactory.csproj", "{D9ACC468-79E3-4B1A-AD54-DFA583ECBA6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeFactory", "ShapeFactory\ShapeFactory.csproj", "{D9ACC468-79E3-4B1A-AD54-DFA583ECBA6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{4C5FD0C7-EA52-4B04-8E09-22094D5EFFD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{4C5FD0C7-EA52-4B04-8E09-22094D5EFFD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAlarm", "EventAlarm\EventAlarm.csproj", "{37ED7922-67BB-4504-ABEA-7609B3E21277}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventAlarm", "EventAlarm\EventAlarm.csproj", "{37ED7922-67BB-4504-ABEA-7609B3E21277}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A60F623E-E738-40AA-814E-8FB34ABDE71C}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderLibrary", "OrderLibrary\OrderLibrary.csproj", "{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderLibraryTest", "OrderLibraryTest\OrderLibraryTest.csproj", "{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,6 +162,30 @@ Global
 		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|x64.Build.0 = Release|Any CPU
 		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|x86.ActiveCfg = Release|Any CPU
 		{37ED7922-67BB-4504-ABEA-7609B3E21277}.Release|x86.Build.0 = Release|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Debug|x64.Build.0 = Debug|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Debug|x86.Build.0 = Debug|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Release|x64.ActiveCfg = Release|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Release|x64.Build.0 = Release|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Release|x86.ActiveCfg = Release|Any CPU
+		{8BF88AF0-3211-48B5-A1B5-DF19AD1972AA}.Release|x86.Build.0 = Release|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Debug|x64.Build.0 = Debug|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Debug|x86.Build.0 = Debug|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Release|x64.Build.0 = Release|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Release|x86.ActiveCfg = Release|Any CPU
+		{1B14E98D-2E07-4EC2-A444-AB9F9924EC57}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
