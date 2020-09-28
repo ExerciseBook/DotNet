@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UI.Helpers;
 
 namespace OrderLibrary
@@ -17,7 +18,7 @@ namespace OrderLibrary
         /// 订单信息
         /// TODO 讲道理这里应该要丢数据库的，我又懒了。
         /// </summary>
-        private static List<Order> _orders = new List<Order>();
+        private static ObservableCollection<Order> _orders = new ObservableCollection<Order>();
 
         /// <summary>
         /// 
@@ -109,5 +110,11 @@ namespace OrderLibrary
             _mutex.ReleaseOccupation();
 
         }
+
+        public ObservableCollection<Order> GetOrigionalList()
+        {
+            return _orders;
+        }
+
     }
 }

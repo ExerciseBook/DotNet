@@ -15,3 +15,14 @@
 |形状工厂|ShapeFactory|
 |为本讲示例中的泛型链表类添加ForEach(Action<T> action)方法|MyLinkedList|
 |假装是个事件系统|EventAlarm|
+
+# Week 3
+|题目|文件夹|
+|:----|:----|
+|订单管理系统核心|OrderLibrary|
+|订单管理系统测试|OrderLibraryTest|
+
+# Week 4
+|题目|文件夹|
+|:----|:----|
+|订单管理系统界面|OrderUI|

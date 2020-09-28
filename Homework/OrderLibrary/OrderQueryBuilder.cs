@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -10,7 +11,7 @@ namespace OrderLibrary
         private IQueryable<Order> query;
 
 
-        public OrderQueryBuilder(List<Order> orders)
+        public OrderQueryBuilder(ObservableCollection<Order> orders)
         {
             this.query = orders.AsQueryable();
         }
