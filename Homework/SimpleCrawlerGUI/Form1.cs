@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
+using System.Collections.Concurrent;
 
 namespace Crawler___Winform
 {
@@ -29,30 +29,45 @@ namespace Crawler___Winform
         private void btnStart_Click(object sender, EventArgs e)
         {
             resultBindingSource.Clear();
+            Crawler.urls=new ConcurrentBag<urlstates>();
+            Crawler.count = 0;
             Crawler.startUrl = txtUrl.Text;
 
             if (thread != null)
             {
                 thread.Abort();
             }
-            Crawler.urls.Add(Crawler.startUrl, false);//加入初始页面
+            
             thread = new Thread(Crawler.Crawl);
             thread.Start();
         }
 
 
-        private void PageDownloaded(Crawler crawler, string url)
+        private void PageDownloaded(Crawler crawler, urlstates url)
         {
-            var pageInfo = new { Index = resultBindingSource.Count + 1, URL = url };
-            Action action = () => { resultBindingSource.Add(pageInfo); };
-            if (this.InvokeRequired)
+            lock(resultBindingSource) 
             {
-                this.Invoke(action);
+                var pageInfo = new { Index = resultBindingSource.Count + 1, URL = url.url };
+                Action action = () => { resultBindingSource.Add(pageInfo); };
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(action);
+                }
+                else
+                {
+                    action();
+                }
             }
-            else
-            {
-                action();
-            }
+            
+            
+            
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (thread != null)
+                thread.Abort();
         }
     }
 }

@@ -8,62 +8,85 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
 
 namespace SimpleCrawler
 {
+    class urlstates
+    {
+        public string url { get; set; }
+        public bool processing { get; set; }
+        public string html { get; set; }
+
+    }
+
     class Crawler
     {
-        public event Action<Crawler, string> PageDownloaded;
-
-        public Hashtable urls = new Hashtable();
-        private int count = 0;
+        public event Action<Crawler, urlstates> PageDownloaded;
+        //使用线程安全的集合
+        public ConcurrentBag<urlstates> urls = new ConcurrentBag<urlstates>();
+        public int count = 0;
         static public string startUrl = "";
         static public string startWith = "";
 
         public void Crawl()
         {
+            urlstates surl = new urlstates() { url = startUrl, processing = false, html = "" };
+            urls.Add(surl);
+
             string str = @"(www\.){0,1}.*?\..*?/";
             Regex r = new Regex(str);
             Match m = r.Match(startUrl);
             startWith = m.Value;
 
-            //Console.WriteLine("开始爬行了.... ");
             while (true)
             {
-                string current = null;
-                foreach (string url in urls.Keys)
+                urlstates current = null;
+                foreach (var url in urls)
                 {
-                    if ((bool)urls[url]) continue;
+                    if (url.processing) continue;
                     current = url;
+                    if (count > 20)
+                        break;
+                    if (current == null)
+                        continue;
+                    current.processing = true;
+                    var t = new Thread(() => Process(current));
+                    t.Start();
+                    count++;
                 }
-
-                if (current == null || count > 20) break;
-                //Console.WriteLine("爬行" + current + "页面!");
-                string html = DownLoad(current); // 下载
-                urls[current] = true;
-                count++;
-                PageDownloaded(this, current);
-                Parse(html, current);//解析,并加入新的链接
-                //Console.WriteLine("爬行结束");
             }
-            //Console.ReadLine();
         }
 
-        public string DownLoad(string url)
+        public bool UrlExsists(string url)
+        {
+
+            foreach (urlstates u in urls)
+            {
+                if (u.url == url)
+                    return true;
+            }
+            return false;
+        }
+
+
+        public void Process(urlstates url)
         {
             try
             {
+                
                 WebClient webClient = new WebClient();
                 webClient.Encoding = Encoding.UTF8;
-                string html = webClient.DownloadString(url);
+                string html = webClient.DownloadString(url.url);
                 string fileName = count.ToString();
                 File.WriteAllText(fileName, html, Encoding.UTF8);
-                return html;
+                url.html = html;
+                PageDownloaded(this, url);
+                Parse(html, url.url);//解析,并加入新的链接
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                //Console.WriteLine(ex.Message);
-                return "";
+                
             }
         }
 
@@ -81,8 +104,11 @@ namespace SimpleCrawler
                 //仅包含起始网站上的网页
                 if (url.Contains(startWith))
                 {
-                    if (urls[url] == null)
-                        urls[url] = false;
+                    if (!UrlExsists(url))
+                    {
+                        urls.Add(new urlstates() { url = url, processing = false, html = "" });
+                    }
+
                 }
             }
 
@@ -96,10 +122,14 @@ namespace SimpleCrawler
                 if (url.Length == 0) continue;
                 Uri baseUri = new Uri(oldUrl);
                 Uri absoluteUri = new Uri(baseUri,url);
-                Console.WriteLine("相对:" + url);
-                Console.WriteLine("绝对:" + absoluteUri.ToString());
-                if (urls[absoluteUri.ToString()] == null)
-                    urls[absoluteUri.ToString()] = false;
+                //仅包含起始网站上的网页
+                if (url.Contains(startWith))
+                {
+                    if (!UrlExsists(url))
+                    {
+                        urls.Add(new urlstates() { url = url, processing = false, html = "" });
+                    }
+                }
             }
         }
     }

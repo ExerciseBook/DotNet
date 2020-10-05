@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.ResultGridView = new System.Windows.Forms.DataGridView();
-            this.txtUrl = new System.Windows.Forms.TextBox();
-            this.btnStart = new System.Windows.Forms.Button();
             this.index = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.URL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUrl = new System.Windows.Forms.TextBox();
+            this.btnStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ResultGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,24 +48,6 @@
             this.ResultGridView.Size = new System.Drawing.Size(669, 378);
             this.ResultGridView.TabIndex = 5;
             // 
-            // txtUrl
-            // 
-            this.txtUrl.Location = new System.Drawing.Point(19, 19);
-            this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(412, 21);
-            this.txtUrl.TabIndex = 7;
-            this.txtUrl.Text = "https://www.cnblogs.com/dstang2000/";
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(437, 19);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 6;
-            this.btnStart.Text = "开始";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
             // index
             // 
             this.index.DataPropertyName = "Index";
@@ -79,6 +61,24 @@
             this.URL.Name = "URL";
             this.URL.Width = 500;
             // 
+            // txtUrl
+            // 
+            this.txtUrl.Location = new System.Drawing.Point(19, 19);
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.Size = new System.Drawing.Size(412, 21);
+            this.txtUrl.TabIndex = 7;
+            this.txtUrl.Text = "https://www.cnblogs.com/jesse2013/";
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(437, 19);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 6;
+            this.btnStart.Text = "开始";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -89,6 +89,7 @@
             this.Controls.Add(this.btnStart);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ResultGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
