@@ -31,3 +31,4 @@
 |题目|文件夹|
 |:----|:----|
 |简单爬虫|SimpleCrawler|
+|简单爬虫(带可视化界面)|SimpleCrawlerGUI|
