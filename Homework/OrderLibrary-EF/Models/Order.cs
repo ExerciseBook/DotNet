@@ -2,7 +2,7 @@ using System;
 
 namespace OrderLibrary_EF.Models
 {
-    public class Order 
+    public class Order
     {
         /// <summary>
         /// 订单号

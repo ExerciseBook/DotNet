@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Newtonsoft.Json;
 using OrderLibrary_EF.Models;
 
@@ -11,7 +10,7 @@ namespace OrderLibrary_EF
         static void Main(string[] args)
         {
             var db = new Database();
-            db.Add(new Order() { ItemName = "XLX", Custom = "DZY", Balance = 10});
+            db.Add(new Order() { ItemName = "XLX", Custom = "DZY", Balance = 10 });
             db.SaveChanges();
 
 
