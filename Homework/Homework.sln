@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCrawler", "SimpleCraw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCrawlerGUI", "SimpleCrawlerGUI\SimpleCrawlerGUI.csproj", "{720385C7-A555-41F2-8571-82C1395FE42F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderLibrary-EF", "OrderLibrary-EF\OrderLibrary-EF.csproj", "{E8B70750-7D79-43CE-B5BC-30A40636A099}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -242,6 +244,18 @@ Global
 		{720385C7-A555-41F2-8571-82C1395FE42F}.Release|x64.Build.0 = Release|Any CPU
 		{720385C7-A555-41F2-8571-82C1395FE42F}.Release|x86.ActiveCfg = Release|Any CPU
 		{720385C7-A555-41F2-8571-82C1395FE42F}.Release|x86.Build.0 = Release|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Debug|x64.Build.0 = Debug|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Debug|x86.Build.0 = Debug|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Release|x64.ActiveCfg = Release|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Release|x64.Build.0 = Release|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8B70750-7D79-43CE-B5BC-30A40636A099}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

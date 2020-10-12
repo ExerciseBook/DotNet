@@ -32,3 +32,8 @@
 |:----|:----|
 |简单爬虫|SimpleCrawler|
 |简单爬虫(带可视化界面)|SimpleCrawlerGUI|
+
+# Week 6
+|题目|文件夹|
+|:----|:----|
+|订单管理系统-EF|OrderLibrary-EF|
